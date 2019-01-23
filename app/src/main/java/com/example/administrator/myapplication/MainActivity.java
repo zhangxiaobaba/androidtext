@@ -1,6 +1,7 @@
 package com.example.administrator.myapplication;
 
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         NotificationManager systemService = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+        Intent intent = new Intent(this,MainActivity.class);
+        getApplicationContext().startActivity(intent);
 
     }
 }
